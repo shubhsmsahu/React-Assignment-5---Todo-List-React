@@ -40,42 +40,39 @@ function App() {
   };
 
   return (
-    <>
-      <div id="main">
-        <div className="center_div">
-          <br />
-          <h1>ToDo List</h1>
-          <br />
-          <EnterItem
-            id="task"
-            type="text"
-            placeholder="Add a Item"
-            value={item}
-            onChange={itemValue}
-          />
-          <button id="btn" onClick={ChangeValue}>
-            +
-          </button>
-          <ol>
-            {itemArr.map((itemCur, index) => {
-              return (
-                <ToDoLists
-                  className="list"
-                  classNameDelete="delete"
-                  classNameEdit="edit"
-                  key={index}
-                  id={index}
-                  text={itemCur}
-                  onSelect={deletitem}
-                  onEdit={updateItem}
-                />
-              );
-            })}
-          </ol>
-        </div>
+    <div id="main">
+      <div className="center_div">
+        <br />
+        <h1>ToDo List</h1>
+        <br />
+        <EnterItem
+          id="task"
+          type="text"
+          placeholder="Add a Item"
+          value={item}
+          onChange={itemValue}
+        />
+        <button id="btn" onClick={ChangeValue}>
+          +
+        </button>
+        <ol>
+          {itemArr.map((itemCur, index) => {
+            return (
+              <ToDoLists
+                className="list"
+                classNameDelete="delete"
+                classNameEdit="edit"
+                key={index}
+                id={index}
+                text={itemCur}
+                onSelect={deletitem}
+                onEdit={updateItem}
+              />
+            );
+          })}
+        </ol>
       </div>
-      ;
-    </>
+    </div>
   );
 }
 
