@@ -18,20 +18,26 @@ const ToDoLists = (props) => {
   return (
     <>
       <div className="todo_style">
+        <li className={props.className}>{props.text}</li>
         <button
           className={props.classNameDelete}
           onClick={() => {
             props.onSelect(props.id);
           }}
         >
-          X
+          delete
         </button>
-        <li className={props.className}>{props.text}</li>
         {addInEdit.show ? (
           <>
             <br />
-            <input type="text" placeholder="Edit" onChange={funEditUpdate} />
+            <input
+              type="text"
+              className="editTask"
+              placeholder="Edit"
+              onChange={funEditUpdate}
+            />
             <button
+              className="saveTask"
               onClick={() => {
                 props.onEdit(props.id, editInput);
                 setAddInEdit({ show: false });
@@ -42,7 +48,7 @@ const ToDoLists = (props) => {
           </>
         ) : (
           <button className={props.classNameEdit} onClick={EditItem}>
-            e+
+            edit
           </button>
         )}
       </div>

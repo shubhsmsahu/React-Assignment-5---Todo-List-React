@@ -52,13 +52,13 @@ input {
   outline: none;
 }
 button {
-  min-height: 40px;
-  width: 40px;
-  border-radius: 50%;
+  min-height: 20px;
+  width: 70px;
+  /* border-radius: 50%; */
   border-color: transparent;
   background-color: #8566aa;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   border: none;
   outline: none;
   margin-left: 10px;
