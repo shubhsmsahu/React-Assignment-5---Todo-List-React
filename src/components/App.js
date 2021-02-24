@@ -20,7 +20,7 @@ function App() {
   };
 
   const deletitem = (id) => {
-    console.log("delete");
+    // console.log("delete");
     setItemArr((preValu) => {
       return preValu.filter((arrEle, index) => {
         return index !== id;
