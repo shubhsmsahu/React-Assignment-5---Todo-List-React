@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import ToDoLists from "./ToDolist";
-import EnterItem from "./InputItem";
+import EnterItem from "./inputItem";
 import "./../styles/App.css";
 
 function App() {
